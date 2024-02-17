@@ -1,0 +1,49 @@
+.heading {
+    color: black;
+    font-size: 40px; /* Adjusted font size */
+    font-weight: 700; /* Adjusted font weight */
+    margin-bottom: 20px; /* Increased bottom margin */
+}
+
+.address {
+    font-size: 20px; /* Adjusted font size */
+    font-weight: 500; /* Adjusted font weight */
+}
+
+#Purchase {
+    padding: 30px 0;
+    text-align: center; /* Center align the content */
+}
+
+form {
+    display: inline-block; /* Display form as inline block */
+    text-align: left; /* Align form elements to the left */
+    margin-top: 20px; /* Add top margin */
+}
+
+form label {
+    display: block; /* Display labels as block */
+    font-weight: 600; /* Increase font weight */
+    margin-bottom: 5px; /* Add bottom margin to labels */
+    text-align: right; /* Right align labels */
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="submit"] {
+    flex: 0 0 60%; /* Set input width */
+    padding: 10px;
+    margin-bottom: 10px;/
+}
+
+form input[type="submit"] {
+    background-color: blue; /* Change submit button background color */
+    color: white; /* Change submit button text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Adjust padding */
+    cursor: pointer; /* Add cursor pointer */
+}
+
+form input[type="submit"]:hover {
+    background-color: darkblue; /* Change submit button background color on hover */
+}
