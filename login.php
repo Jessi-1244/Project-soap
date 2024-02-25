@@ -1,3 +1,21 @@
+<?php
+ob_start(); // Start output buffering
+
+// Your PHP code here
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Check if the password is correct
+    $password = $_POST["password"];
+    if ($password === 'jack123@#') {
+        // Password is correct, redirect to index page
+        header("Location: index.php");
+        exit;
+    } else {
+        // Password is incorrect, display an error message or perform any other action
+        echo "<script>alert('Unauthorized Persons Can not Login');</script>";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -109,21 +127,8 @@
             }
         });
     </script>
-
-<?php
-        // Perform login authentication here
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            // Check if the password is correct
-            $password = $_POST["password"];
-            if ($password === 'jack123@#') {
-                // Password is correct, redirect to index page
-                header("Location: index.php");
-                exit;
-            } else {
-                // Password is incorrect, display an error message or perform any other action
-                echo "<script>alert('Unauthorized Persons Can not Login');</script>";
-            }
-        }
-    ?>
 </body>
 </html>
+<?php
+ob_end_flush(); // Flush output buffer and send output to browser
+?>
